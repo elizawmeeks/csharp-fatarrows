@@ -18,6 +18,9 @@ namespace expression_members
 
             string ElizaPreyList = Eliza.PreyList();
             string SmingleighPreyList = Smingleigh.PreyList();
+            Console.WriteLine($@"Predator Lists:
+{Eliza.PredatorList()}
+{Smingleigh.PredatorList()}");
             Console.WriteLine($@"Prey Lists:
 {SmingleighPreyList}
 {ElizaPreyList}");
