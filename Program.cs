@@ -21,6 +21,8 @@ namespace expression_members
             Console.WriteLine($@"Prey Lists:
 {SmingleighPreyList}
 {ElizaPreyList}");
+            Console.WriteLine(Smingleigh.Eat("all the internets"));
+            Console.WriteLine(Eliza.Eat("peach"));
 
         }
     }
@@ -56,7 +58,7 @@ namespace expression_members
         public string PredatorList() => string.Join(",", this.Predators);
 
         // Convert this to expression method (hint: use a C# ternary)
-        public string Eat(string food) => this.Prey.Contains(food) ? "{this.Name} ate the {food}." : "{this.Name} is still hungry.";
+        public string Eat(string food) => this.Prey.Contains(food) ? $"{this.Name} ate the {food}." : $"{this.Name} is still hungry.";
 
     }
 }
